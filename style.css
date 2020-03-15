@@ -3,38 +3,36 @@ body {
 }
 
 .wrapper {
-    width: 750px;
-    margin: 30px auto;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 150px);
+    grid-auto-rows: 150px;
+    justify-content: center;
 }
 
-.lineOne, .lineTwo, .lineThree, #equals {
-    left: 0px;
-    float: inline-start;
-}
-
-button {
-    width: 150px;
-    height: 150px;
+.number, .operator, .action, #equals{
     font-size: 3em;
-    float: left;
-    background-color: rgb(127, 193, 255);
+    box-shadow: 5px 5px 5px rgb(140, 163, 127);
 }
 
-#backspace, #clear {
-    width: 300px;
+.action {
+    grid-column: span 2;
 }
 
-.problemWrapper {
+#equals, .problem-wrapper {
+    grid-column: span 5;
+}
+
+.problem-wrapper {
     width: 747px;
     height: 80px;
-    background-color: rgb(212, 248, 237);
-    border: 2px solid rgb(142, 161, 143);
+    background-color: red;
 }
 
-.problem {
+p {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
-    margin: 5px;
-    padding: 5px;
+    object-fit: cover;
+    background-color: rgb(212, 248, 237);
 }

@@ -9,80 +9,30 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="problemWrapper">
-            <p class="problem"></p>
+        <div class="problem-wrapper">
+            <p id="problem"></p>
         </div>
-        <div class="lineOne">
-            <button id="one" class="numbers">1</button>
-            <button id="two" class="numbers">2</button>
-            <button id="three" class="numbers">3</button>
-            <button id="plus" class="numbers" class="operator"> + </button>
-            <button id="minus" class="numbers" class="operator"> - </button>
-        </div>
-        <div class="lineTwo">
-            <button id="four" class="numbers">4</button>
-            <button id="five" class="numbers">5</button>
-            <button id="six" class="numbers">6</button>
-            <button id="times" class="numbers" class="operator"> * </button>
-            <button id="dividedBy" class="numbers" class="operator"> / </button>
-        </div>
-        <div class="lineThree">
-            <button id="seven" class="numbers">7</button>
-            <button id="eight" class="numbers">8</button>
-            <button id="nine" class="numbers">9</button>
-            <button id="zero" class="numbers">0</button>
-            <button id="point" class="numbers">.</button>
-        </div>
-        <button id="backspace">Backspace</button>
-        <button id="clear">Clear</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator"> + </button>
+        <button class="operator"> - </button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator"> * </button>
+        <button class="operator"> / </button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="number">.</button>
+        <button class="operator">^</button>
+        <button class="number">0</button>
+        <button class="action">Clear</button>
+        <button class="action">Backspace</button>
         <button id="equals">=</button>
     </div>
 
-    <script>
-        const add = (a, b) => {
-            let solution = a + b;
-            p.textContent = solution;
-        };
-        const subtract = (a, b) => {
-            let solution = a - b;
-            p.textContent = solution;
-        };
-        const multiply = (a, b) => {
-            let solution = a * b;
-            p.textContent = solution;
-        };
-        const divide = (a, b) => {
-            let solution = a / b;
-            p.textContent = solution;
-        };
-        const operate = (a, b, operation) => {
-            operation === ' + '? add(a, b) : operation === ' - '?
-                                subtract(a, b) : operation === ' * '?
-                                multiply(a, b) : divide(a, b);
-        };
-        var p = document.querySelector('p');
-        var num1 = '';
-        var num2 = '';
-        var operation = '';
-        var operators = document.querySelectorAll('.operator');
-        operators.forEach(function(operator){
-            operator.addEventListener('click', function(){
-                num1 += p.textContent;
-                operation += operator.textContent;
-                num2 = '';
-            });
-        })
-        var numbers = document.querySelectorAll('.numbers');
-        numbers.forEach(function(number){
-            number.addEventListener('click', function(){
-                num2 += number.textContent;
-                p.textContent += number.textContent;
-            });
-        });
-        var equals = document.querySelector('#equals');
-        equals.addEventListener('click', function(){
-            operate(Number.num1, Number.num2, operation);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
